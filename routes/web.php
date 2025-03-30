@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function(){
-    return view('home');
-});
+use App\Http\Controllers\BlogsFeedController;
+
+Route::get('/', [BlogsFeedController::class, 'routes'])->name('home');
+
+Route::get('/Profile', [BlogsFeedController::class, 'routes'])->name('profile');
+
+// Route::get('/Profile', function(){
+//     return view('Profile.profile');
+// })->name('profile');
