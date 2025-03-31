@@ -46,23 +46,22 @@ body, html{
                 color: $text_color;
                 outline: none;
                 margin: 0 $nonres_margin 0 $nonres_margin;
-                z-index: 10;
                 overflow: visible;
-
-                ::before{
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $text_color;
-                    width: 0%;
-                    height: $nonres_height;
-                    transition: width $transition_pacing;
-                    pointer-events: none;
-                }
-                :hover::before{
-                    width: 100%;
-                }
+            }
+            > a::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $text_color;
+                width: 0%;
+                height: 1px;
+                transition: width $transition_pacing;
+                pointer-events: none;
+                z-index: -1;
+            }
+            > a:hover::before{
+                width: 100%;
             }
         }
 
