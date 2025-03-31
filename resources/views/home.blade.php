@@ -2,7 +2,10 @@
     @vite('resources/CSS/feed.scss')
     
     <div class="Feed">
-
+        @foreach($posts as $post)
+        <p>{{$post->post_text}}</p>
+        <img src="{{$post->post_file}}" alt="Post Image">
+        @endforeach
     </div>
 
     <form method="" action="POST" class="PostForm">

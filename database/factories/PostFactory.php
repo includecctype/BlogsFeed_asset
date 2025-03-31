@@ -18,7 +18,7 @@ class PostFactory extends Factory
     {
         return [
             'post_text' => fake()->paragraph(4),
-            'post_file' => fake()->image()
+            'post_file' => fake()->imageUrl()
         ];
     }
 }
