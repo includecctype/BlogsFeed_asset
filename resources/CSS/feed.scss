@@ -1,0 +1,53 @@
+$nonres_margin: 20px;
+
+.Feed{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid rgb(25, 25, 25);
+    width: 60%;
+    height: max-content;
+
+    > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: $nonres_margin;
+        padding: $nonres_margin;
+
+        p{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: justify;
+            width: 100%;
+            margin: $nonres_margin;
+        }
+    }
+}
+
+.PostForm{
+    position: fixed;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(25, 25, 25, 0.75);
+    width: 100vw;
+    height: 100vh;
+
+    :is(input, label){
+        margin: $nonres_margin;
+    }
+    > label{
+        color: white;
+    }
+    :nth-child(2){
+        outline: none;
+        width: 60%;
+        height: 250px;
+    }
+}
