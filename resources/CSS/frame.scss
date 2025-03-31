@@ -94,5 +94,6 @@ body, html{
         aspect-ratio: 1/1;
         object-fit: contain;
         cursor: pointer;
+        transition: all 0.35s linear;
     }
 }
