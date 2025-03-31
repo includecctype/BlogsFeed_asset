@@ -11,7 +11,7 @@
 
     <div class="Navbar">
         <img alt="Logo"/>
-        <nav class="Navbar">
+        <nav>
             @if($pathname == "home")
             <a href="{{route('profile')}}">PROFILE</a>
             @elseif($pathname == "profile")
@@ -19,7 +19,7 @@
             @endif
             <a href="{{route('setting')}}">SETTING</a>
         </nav>
-        <svg width="100" height="100" version="1.1" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg">
+        <svg version="1.1" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg">
             <g fill="#dcdcdc">
              <rect x=".22084" y=".22084" width="26.017" height="26.017" rx="1.3746" ry="1.276" fill-opacity=".5"/>
              <g stroke="#000" stroke-linecap="round">

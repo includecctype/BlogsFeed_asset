@@ -1,0 +1,78 @@
+$nonres_height: 80px;
+$nonres_margin: 20px;
+$text_color: rgb(25, 25, 25);
+$nonres_border_radius: 10px;
+$transition_pacing: 0.35s linear;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body, html{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+
+    > .Navbar{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 70%;
+        height: $nonres_height;
+
+        > :nth-child(1){
+            width: $nonres_height;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            margin-right: auto;
+        }
+
+        > :nth-child(2){
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin: 0 $nonres_margin 0 $nonres_margin;
+            background-color: rgba(200, 200, 200, 0.5);
+            border-radius: $nonres_border_radius;
+            height: calc($nonres_height/2);
+
+            > a{
+                position: relative;
+                text-decoration: none;
+                color: $text_color;
+                outline: none;
+                margin: 0 $nonres_margin 0 $nonres_margin;
+                z-index: 10;
+                overflow: visible;
+
+                ::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $text_color;
+                    width: 0%;
+                    height: $nonres_height;
+                    transition: width $transition_pacing;
+                    pointer-events: none;
+                }
+                :hover::before{
+                    width: 100%;
+                }
+            }
+        }
+
+        > :nth-child(3){
+            position: relative;
+            width: calc($nonres_height/2);
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            cursor: pointer;
+            z-index: 9;
+        }
+    }
+}

@@ -5,7 +5,10 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/JS/navbar.js', 'resources/CSS/navbar.scss'],
+            input: [
+                'resources/JS/navbar.js',
+                'resources/CSS/navbar.scss',
+            ],
             refresh: true,
         }),
         tailwindcss(),
