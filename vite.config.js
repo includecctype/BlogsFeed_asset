@@ -6,8 +6,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/JS/navbar.js',
-                'resources/CSS/navbar.scss',
+                'resources/JS/frame.js',
+                'resources/CSS/frame.scss',
             ],
             refresh: true,
         }),

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogsFeed</title>
 
-    @vite('resources/CSS/navbar.scss')
+    @vite('resources/CSS/frame.scss')
 </head>
 <body>
 
@@ -33,6 +33,8 @@
 
     {{$slot}}
 
-    @vite('resources/js/navbar.js')
+    
+
+    @vite('resources/js/frame.js')
 </body>
 </html>
