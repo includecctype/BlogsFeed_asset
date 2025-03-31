@@ -20,5 +20,5 @@
         <input type="image" src=""/>
     </form>
 
-    @vite('resources/JS/frame.js') <!-- Use another JS file, create new querySelector for the elements -->
+    @vite('resources/JS/feed.js')
 </x-navbar>

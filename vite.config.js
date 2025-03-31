@@ -7,6 +7,7 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/JS/frame.js',
+                'resources/JS/feed.js',
                 'resources/CSS/frame.scss',
                 'resources/CSS/feed.scss',
             ],

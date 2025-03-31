@@ -26,6 +26,13 @@ $nonres_margin: 20px;
             margin: $nonres_margin;
         }
     }
+
+    @media(max-width: 1100px) and (min-width: 600px){
+        width: 70%;
+    }
+    @media(max-width: 600px){
+        width: 80%;
+    }
 }
 
 .PostForm{
