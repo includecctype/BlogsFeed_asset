@@ -21,7 +21,7 @@ body, html{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        width: 70%;
+        width: 75%;
         height: $nonres_height;
 
         > :nth-child(1){
@@ -73,5 +73,13 @@ body, html{
             cursor: pointer;
             z-index: 9;
         }
+    }
+
+    .AddPost{
+        position: fixed;
+        width: calc($nonres_height/1.25);
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        cursor: pointer;
     }
 }

@@ -8,6 +8,7 @@ export default defineConfig({
             input: [
                 'resources/JS/frame.js',
                 'resources/CSS/frame.scss',
+                'resources/CSS/feed.scss',
             ],
             refresh: true,
         }),

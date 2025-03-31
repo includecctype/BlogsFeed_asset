@@ -33,7 +33,7 @@
 
     {{$slot}}
 
-    
+    <img alt="AddPost" class="AddPost"/>
 
     @vite('resources/js/frame.js')
 </body>
