@@ -10,6 +10,8 @@ export default defineConfig({
                 'resources/JS/feed.js',
                 'resources/CSS/frame.scss',
                 'resources/CSS/feed.scss',
+                'resources/CSS/login.scss',
+                'resources/CSS/register.scss',
             ],
             refresh: true,
         }),

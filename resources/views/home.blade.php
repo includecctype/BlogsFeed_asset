@@ -11,14 +11,18 @@
         @endforeach
     </div>
 
-    <form method="" action="POST" class="PostForm">
+    @auth
+    <form method="POST" action="{{route('post')}}" class="PostForm">
+        @csrf 
+
         <label for="post_text">Thoughts: </label>
         <input type="text" name="post_text" required/>
         <label for="post_file">File: </label>
         <input type="file" name="post_file"/>
 
-        <input type="image" src=""/>
+        <button type="submit">SUBMIT</button>
     </form>
+    @endauth
 
     @vite('resources/JS/feed.js')
 </x-navbar>

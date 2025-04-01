@@ -64,7 +64,6 @@ body, html{
                 height: 1px;
                 transition: width $transition_pacing;
                 pointer-events: none;
-                z-index: -1;
             }
             > a:hover::before{
                 width: 100%;

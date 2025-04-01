@@ -16,8 +16,17 @@
             <a href="{{route('profile')}}">PROFILE</a>
             @elseif($pathname == "profile")
             <a href="{{route('home')}}">HOME</a>
+            @elseif($pathname == "auth")
+            <a href="{{route('profile')}}">PROFILE</a>
+            <a href="{{route('home')}}">HOME</a>
             @endif
             <a href="{{route('setting')}}">SETTING</a>
+            @auth
+            <form action="{{route('logout')}}" method="POST">
+                @csrf 
+                <button type="submit">LOGOUT</button>
+            </form>
+            @endauth
         </nav>
         <svg version="1.1" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg">
             <g fill="#dcdcdc">
@@ -33,7 +42,9 @@
 
     {{$slot}}
 
+    @auth
     <img alt="AddPost" class="AddPost"/>
+    @endauth
 
     @vite('resources/js/frame.js')
 </body>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->text('post_text');
-            $table->binary('post_file');
+            $table->binary('post_file')->default(0);
         });
     }
 
