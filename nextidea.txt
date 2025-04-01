@@ -1,0 +1,7 @@
+Create a foreign key column in the posts table for user_id
+
+In this profile page, output the posts based on the current user's id
+
+
+
+
