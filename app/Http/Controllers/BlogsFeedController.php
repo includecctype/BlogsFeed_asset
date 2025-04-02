@@ -40,7 +40,7 @@ class BlogsFeedController extends Controller
 
         $validated = $request->validate([
             'post_text' => 'required|string|min:1',
-            'post_file' => 'nullable|image',
+            'post_file' => 'nullable|image', // File cannot be uploaded to database, learn Cloudflare
         ]);
 
         $validated['user_id'] = Auth::id();
