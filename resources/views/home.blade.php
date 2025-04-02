@@ -5,14 +5,14 @@
         @foreach($posts as $post)
         <div>
             <p>{{$post->post_text}}</p>
-            <img src="{{$post->post_file}}" alt="Post Image"/> <!-- src is returning 0 or false -->
+            <img src="{{ asset($post->post_file) }}" alt="Post Image"/> <!-- src is returning 0 or false -->
         </div>
         <hr/>
         @endforeach
     </div>
 
     @auth
-    <form method="POST" action="{{route('post')}}" class="PostForm">
+    <form method="POST" action="{{route('post')}}" enctype="multipart/form-data" class="PostForm">
         @csrf 
 
         <label for="post_text">Thoughts: </label>

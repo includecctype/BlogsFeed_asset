@@ -21,13 +21,19 @@ hr{
         margin: $nonres_margin;
         padding: $nonres_margin;
 
-        p{
+        > p{
             display: flex;
             justify-content: flex-start;
             align-items: center;
             text-align: justify;
             width: 100%;
             margin: $nonres_margin;
+        }
+
+        > img{
+            object-fit: contain;
+            width: 400px;
+            aspect-ratio: 4/3;
         }
     }
 

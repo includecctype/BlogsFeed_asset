@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 use App\Models\Post;
+use Illuminate\Support\Facades\Storage;
 
 class BlogsFeedController extends Controller
 {
@@ -38,14 +39,18 @@ class BlogsFeedController extends Controller
 
     public function post(Request $request){
 
-        $validated = $request->validate([
+        $request->validate([
             'post_text' => 'required|string|min:1',
-            'post_file' => 'nullable|image', // File cannot be uploaded to database, learn Cloudflare
+            'post_file' => 'mimes:jpg,png|max:2048',
         ]);
 
-        $validated['user_id'] = Auth::id();
+        $path ??= Storage::put('images', $request->file('post_file'), 'public');
 
-        $validated && Post::create($validated);
+        Post::create([
+            'post_text' => $request->post_text,
+            'post_file' => $path,
+            'user_id' => Auth::id()
+        ]);
 
         return redirect()->route('home');
 
