@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -15,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->text('post_text');
-            $table->binary('post_file')->default(0);
+            $table->binary('post_file')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }

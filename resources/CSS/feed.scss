@@ -1,5 +1,9 @@
 $nonres_margin: 20px;
 
+hr{
+    align-self: stretch;
+}
+
 .Feed{
     display: flex;
     flex-direction: column;

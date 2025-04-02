@@ -7,7 +7,7 @@
             <p>{{$post->post_text}}</p>
             <img src="{{$post->post_file}}" alt="Post Image"/> <!-- src is returning 0 or false -->
         </div>
-        <hr/> <!-- Not Working -->
+        <hr/>
         @endforeach
     </div>
 
