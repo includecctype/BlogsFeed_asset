@@ -1,7 +1,8 @@
 <x-navbar :pathname="$pathname">
+    @vite('resources/CSS/profile.scss')
     
     <div class="Profile">
-
+        <p>Welcome, {{$user->name}}</p>
     </div>
     <div class="Feed">
         @foreach ($posts as $post)

@@ -16,6 +16,7 @@ class BlogsFeedController extends Controller
 
         $current_user_id = Auth::id();
         $personal_posts = DB::table('posts')->where('user_id', $current_user_id)->get();
+        $personal_acc = DB::table('users')->where('id', $current_user_id)->first();
 
         $posts = POST::orderBy('id', 'desc')->get();
 
@@ -26,7 +27,8 @@ class BlogsFeedController extends Controller
         }elseif($request->is('Profile')){
             return view('Profile.profile')
                 ->with('pathname', 'profile')
-                ->with('posts', $personal_posts);
+                ->with('posts', $personal_posts)
+                ->with('user', $personal_acc);
         }elseif($request->is('login')){
             return view('auth.login', ['pathname' => 'auth']);
         }elseif($request->is('register')){

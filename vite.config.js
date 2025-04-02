@@ -12,6 +12,7 @@ export default defineConfig({
                 'resources/CSS/feed.scss',
                 'resources/CSS/login.scss',
                 'resources/CSS/register.scss',
+                'resources/CSS/profile.scss',
             ],
             refresh: true,
         }),
