@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,8 @@ class PostFactory extends Factory
     {
         return [
             'post_text' => fake()->paragraph(4),
-            'post_file' => fake()->image()
+            'post_file' => fake()->image(),
+            'user_id' => User::inRandomOrder()->first()->id
         ];
     }
 }

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->text('post_text');
             $table->binary('post_file')->default(0);
-              
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 
