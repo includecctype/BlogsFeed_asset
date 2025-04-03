@@ -8,7 +8,7 @@
         @foreach ($posts as $post)
         <div>
             <p>{{$post->post_text}}</p>
-            <img src="{{ asset($post->post_file) }}" alt="Post Image"/> <!-- src is returning 0 or false -->
+            <img src="{{ asset($post->post_file) }}" alt="Post Image"/> 
         </div>
         <hr/>
         @endforeach
