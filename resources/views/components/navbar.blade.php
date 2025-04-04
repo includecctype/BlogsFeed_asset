@@ -46,6 +46,6 @@
     <img alt="AddPost" class="AddPost"/>
     @endauth
 
-    @vite('resources/js/frame.js')
+    @vite('resources/JS/frame.js')
 </body>
 </html>
