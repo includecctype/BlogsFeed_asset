@@ -1,0 +1,21 @@
+{
+  "resources/CSS/navbar.scss": {
+    "file": "assets/navbar-l0sNRNKZ.js",
+    "name": "navbar",
+    "src": "resources/CSS/navbar.scss",
+    "isEntry": true
+  },
+  "resources/JS/navbar.js": {
+    "file": "assets/navbar-A8x55UUG.js",
+    "name": "navbar",
+    "src": "resources/JS/navbar.js",
+    "isEntry": true,
+    "assets": [
+      "assets/Logo-DXnmbuL3.svg"
+    ]
+  },
+  "resources/SVG/Logo.svg": {
+    "file": "assets/Logo-DXnmbuL3.svg",
+    "src": "resources/SVG/Logo.svg"
+  }
+}
