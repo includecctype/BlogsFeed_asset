@@ -1,18 +1,43 @@
 {
-  "resources/CSS/navbar.scss": {
-    "file": "assets/navbar-l0sNRNKZ.js",
-    "name": "navbar",
-    "src": "resources/CSS/navbar.scss",
+  "resources/CSS/feed.scss": {
+    "file": "assets/feed-BBg3WcZE.css",
+    "src": "resources/CSS/feed.scss",
     "isEntry": true
   },
-  "resources/JS/navbar.js": {
-    "file": "assets/navbar-A8x55UUG.js",
-    "name": "navbar",
-    "src": "resources/JS/navbar.js",
+  "resources/CSS/frame.scss": {
+    "file": "assets/frame-Ch2AieCC.css",
+    "src": "resources/CSS/frame.scss",
+    "isEntry": true
+  },
+  "resources/CSS/login.scss": {
+    "file": "assets/login-4ZqSd-vg.css",
+    "src": "resources/CSS/login.scss",
+    "isEntry": true
+  },
+  "resources/CSS/register.scss": {
+    "file": "assets/register-9ogpvmFo.css",
+    "src": "resources/CSS/register.scss",
+    "isEntry": true
+  },
+  "resources/JS/feed.js": {
+    "file": "assets/feed-CBGcyan2.js",
+    "name": "feed",
+    "src": "resources/JS/feed.js",
+    "isEntry": true
+  },
+  "resources/JS/frame.js": {
+    "file": "assets/frame-DdojrGeW.js",
+    "name": "frame",
+    "src": "resources/JS/frame.js",
     "isEntry": true,
     "assets": [
-      "assets/Logo-DXnmbuL3.svg"
+      "assets/Logo-DXnmbuL3.svg",
+      "assets/AddPost-BvDfVHk0.svg"
     ]
+  },
+  "resources/SVG/AddPost.svg": {
+    "file": "assets/AddPost-BvDfVHk0.svg",
+    "src": "resources/SVG/AddPost.svg"
   },
   "resources/SVG/Logo.svg": {
     "file": "assets/Logo-DXnmbuL3.svg",

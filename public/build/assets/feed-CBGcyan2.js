@@ -1,0 +1,1 @@
+if(typeof isAuthenticated<"u"&&isAuthenticated){const e=document.querySelector(".AddPost"),o=document.querySelector(".PostForm");let t=!1;e.addEventListener("click",()=>{t?t&&(o.style.display="none",t=!1):(o.style.display="flex",t=!0)})}const s=document.querySelectorAll(".Feed > div > img");for(const e of s)e.src=="https://blogsfeed.s3.amazonaws.com/0"&&(e.style.display="none");

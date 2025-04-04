@@ -1,0 +1,1 @@
+.Login{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100vw;height:95vh}.Login :is(input,label,button){width:200px;margin:10px}
