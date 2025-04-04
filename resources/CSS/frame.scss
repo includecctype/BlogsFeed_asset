@@ -26,6 +26,7 @@ body, html{
         align-items: center;
         width: 75%;
         height: $nonres_height;
+        z-index: 10;
 
         > :nth-child(1){
             width: $nonres_height;
@@ -43,7 +44,6 @@ body, html{
             background-color: rgba(200, 200, 200, 0.5);
             border-radius: $nonres_border_radius;
             height: calc($nonres_height/2);
-            z-index: 10;
 
             > a{
                 position: relative;

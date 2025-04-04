@@ -17,6 +17,7 @@ return new class extends Migration
             $table->timestamps();
             $table->text('post_text');
             $table->string('post_file');
+            $table->string('username');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }

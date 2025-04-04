@@ -17,10 +17,16 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+
+        $user = User::inRandomOrder()->first();
+        $id = $user->id;
+        $name = $user->name;
+
         return [
             'post_text' => fake()->paragraph(4),
             'post_file' => fake()->image(),
-            'user_id' => User::inRandomOrder()->first()->id
+            'user_id' => $id,
+            'username' => $name
         ];
     }
 }

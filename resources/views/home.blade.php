@@ -4,8 +4,9 @@
     <div class="Feed">
         @for($i = 0; $i < count($posts); $i++)
         <div>
+            <p>{{$posts[$i]->username}}</p>
             <p>{{$posts[$i]->post_text}}</p>
-            <img src="{{ $images[$i] }}" alt="Post Image"/> <!-- src is returning 0 or false -->
+            <img src={{ $images[$i] }} alt="Post Image"/> <!-- src is returning 0 or false -->
         </div>
         <hr/>
         @endfor
@@ -23,6 +24,10 @@
         <button type="submit">SUBMIT</button>
     </form>
     @endauth
+
+    <script>
+        const isAuthenticated = @json(auth()->check());
+    </script>
 
     @vite('resources/JS/feed.js')
 </x-navbar>

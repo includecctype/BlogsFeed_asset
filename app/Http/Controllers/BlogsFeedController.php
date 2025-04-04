@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 
 class BlogsFeedController extends Controller
@@ -57,10 +58,15 @@ class BlogsFeedController extends Controller
 
         $path ??= Storage::disk('s3')->put('images', $request->file('post_file'), 'public');
 
+        $id ??= Auth::id();
+        $user ??= DB::table('users')->where('id', $id)->select('name')->first();
+        $name ??= $user->name;
+        
         Post::create([
             'post_text' => $request->post_text,
             'post_file' => $path,
-            'user_id' => Auth::id()
+            'username' => $name,
+            'user_id' => $id,
         ]);
 
         return redirect()->route('home');
