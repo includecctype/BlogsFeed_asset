@@ -2,13 +2,13 @@
     @vite('resources/CSS/feed.scss')
     
     <div class="Feed">
-        @foreach($posts as $post)
+        @for($i = 0; $i < count($posts); $i++)
         <div>
-            <p>{{$post->post_text}}</p>
-            <img src="{{ asset($post->post_file) }}" alt="Post Image"/> <!-- src is returning 0 or false -->
+            <p>{{$posts[$i]->post_text}}</p>
+            <img src="{{ $images[$i] }}" alt="Post Image"/> <!-- src is returning 0 or false -->
         </div>
         <hr/>
-        @endforeach
+        @endfor
     </div>
 
     @auth

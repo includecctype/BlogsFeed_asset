@@ -16,20 +16,31 @@ class BlogsFeedController extends Controller
     public function routes(Request $request){
 
         $current_user_id = Auth::id();
-        $personal_posts = DB::table('posts')->where('user_id', $current_user_id)->get();
+
         $personal_acc = DB::table('users')->where('id', $current_user_id)->first();
+        $personal_posts = DB::table('posts')->where('user_id', $current_user_id)->get();
+        $personal_post_imgs = [];
+        foreach($personal_posts as $post){
+            $personal_post_imgs[] = Storage::disk('s3')->url($post->post_file);
+        }
 
         $posts = POST::orderBy('id', 'desc')->get();
+        $post_imgs = [];
+        foreach($posts as $post){
+            $post_imgs[] = Storage::disk('s3')->url($post->post_file);
+        }
 
         if($request->is('/')){
             return view('home')
                 ->with('pathname', 'home')
-                ->with('posts', $posts);
+                ->with('posts', $posts)
+                ->with('images', $post_imgs);
         }elseif($request->is('Profile')){
             return view('Profile.profile')
                 ->with('pathname', 'profile')
                 ->with('posts', $personal_posts)
-                ->with('user', $personal_acc);
+                ->with('user', $personal_acc)
+                ->with('images', $personal_post_imgs);
         }elseif($request->is('login')){
             return view('auth.login', ['pathname' => 'auth']);
         }elseif($request->is('register')){
@@ -44,7 +55,7 @@ class BlogsFeedController extends Controller
             'post_file' => 'mimes:jpg,png|max:2048',
         ]);
 
-        $path ??= Storage::put('images', $request->file('post_file'), 'public');
+        $path ??= Storage::disk('s3')->put('images', $request->file('post_file'), 'public');
 
         Post::create([
             'post_text' => $request->post_text,

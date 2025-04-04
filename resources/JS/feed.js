@@ -15,3 +15,18 @@ PostBtn.addEventListener('click', ()=>{
     }
 })
 
+// Image resize
+
+const FeedImages = document.querySelectorAll('.Feed div > img');
+
+for(let FeedImage of FeedImages){
+
+    if(FeedImage.src == null || !FeedImage.src || FeedImage.src == undefined){
+
+        FeedImage.style.width = `0px`;
+        FeedImage.style.height = `0px`;
+
+    }
+
+}
+

@@ -5,13 +5,13 @@
         <p>Welcome, {{$user->name}}</p>
     </div>
     <div class="Feed">
-        @foreach ($posts as $post)
+        @for ($i = 0; $i < count($posts); $i++)
         <div>
-            <p>{{$post->post_text}}</p>
-            <img src="{{ asset($post->post_file) }}" alt="Post Image"/> 
+            <p>{{$posts[$i]->post_text}}</p>
+            <img src="{{ $images[$i] }}" alt="Post Image"/> 
         </div>
         <hr/>
-        @endforeach
+        @endfor
     </div>
 
 </x-navbar>
