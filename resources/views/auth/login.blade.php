@@ -1,4 +1,6 @@
 <x-navbar :pathname="$pathname">
+    {{-- @vite('resources/CSS/login.scss') --}}
+
     <form action="" method="POST" class="Login">
         @csrf
 
@@ -17,6 +19,4 @@
     </form>
 
     <a href="{{route('register')}}">do not have an account yet?</a>
-
-    @vite('resources/CSS/login.scss')
 </x-navbar>

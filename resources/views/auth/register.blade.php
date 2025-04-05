@@ -1,4 +1,6 @@
 <x-navbar :pathname="$pathname">
+    {{-- @vite('resources/CSS/register.scss') --}}
+
     <form action="" method="POST" class="Register">
         @csrf
 
@@ -19,6 +21,4 @@
             @endforeach
         @endif
     </form>
-
-    @vite('resources/CSS/register.scss')
 </x-navbar>

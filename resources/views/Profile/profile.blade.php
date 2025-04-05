@@ -1,5 +1,5 @@
 <x-navbar :pathname="$pathname">
-    @vite('resources/CSS/feed.scss')
+    {{-- @vite('resources/CSS/feed.scss') --}}
     
     <div class="Profile">
         <p>Welcome, {{$user->name}}</p>
@@ -30,5 +30,6 @@
         const isAuthenticated = @json(auth()->check());
     </script>
 
-    @vite('resources/JS/feed.js')
+    {{-- @vite('resources/JS/feed.js') --}}
+    {{-- <script src="{{ asset('JS/feed.js') }}" type="module"></script> --}}
 </x-navbar>

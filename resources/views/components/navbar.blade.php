@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogsFeed</title>
 
-    @vite('resources/CSS/frame.scss')
+    {{-- @vite('resources/CSS/frame.scss') --}}
+    <link rel="stylesheet" href="{{ asset('CSS/frame.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/feed.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/login.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/register.css') }}"/>
 </head>
 <body>
 
@@ -46,6 +50,9 @@
     <img alt="AddPost" class="AddPost"/>
     @endauth
 
-    @vite('resources/JS/frame.js')
+    {{-- @vite('resources/JS/frame.js') --}}
+    <script src="{{ asset('JS/frame.js') }}" type="module"></script>
+    <script src="{{asset('JS/feed.js')}}" type="module"></script>
+
 </body>
 </html>

@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "compile": "sass ./public/CSS/feed.scss ./public/CSS/feed.css && sass ./public/CSS/frame.scss ./public/CSS/frame.css && sass ./public/CSS/login.scss ./public/CSS/login.css && sass ./public/CSS/register.scss ./public/CSS/register.css"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
@@ -15,6 +16,6 @@
     },
     "dependencies": {
         "gsap": "npm:@gsap/business@^3.12.7",
-        "sass": "^1.86.0"
+        "sass": "^1.86.3"
     }
 }
