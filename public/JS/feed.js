@@ -1,6 +1,6 @@
 // Toggle Form
 
-if (typeof isAuthenticated !== 'undefined' && isAuthenticated) {
+if (typeof whether_Authenticated !== 'undefined' && isAuthenticated) {
     // Toggle Form
     const PostBtn = document.querySelector('.AddPost');
     const PostForm = document.querySelector('.PostForm');

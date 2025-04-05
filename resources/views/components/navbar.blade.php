@@ -14,7 +14,7 @@
 <body>
 
     <div class="Navbar">
-        <img alt="Logo"/>
+        <img alt="Logo" src="{{ asset('SVG/Logo.svg') }}"/>
         <nav>
             @if($pathname == "home")
             <a href="{{route('profile')}}">PROFILE</a>
@@ -47,10 +47,15 @@
     {{$slot}}
 
     @auth
-    <img alt="AddPost" class="AddPost"/>
+    <img alt="AddPost" src="{{ asset('SVG/AddPost.svg') }}" class="AddPost"/>
     @endauth
 
+    <script>
+        const whether_Authenticated = @json(auth()->check());
+    </script>
+
     {{-- @vite('resources/JS/frame.js') --}}
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="{{ asset('JS/frame.js') }}" type="module"></script>
     <script src="{{asset('JS/feed.js')}}" type="module"></script>
 

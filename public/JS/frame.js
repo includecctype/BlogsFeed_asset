@@ -1,11 +1,3 @@
-import gsap from 'gsap'
-
-import LOGO from '../SVG/Logo.svg'
-import ADDPOST from '../SVG/AddPost.svg'
-
-// setting logo image
-const NavbarImage = document.querySelector('.Navbar > img')
-NavbarImage.setAttribute('src', LOGO)
 
 // menu button effect, navbar effect
 const Menu = document.querySelector('.Navbar > svg')
@@ -102,23 +94,24 @@ const MenuTop = Menu.getBoundingClientRect().y
 const MenuLeft = Menu.getBoundingClientRect().x
 const MenuWidth = Menu.getBoundingClientRect().width
 
-const AddPost = document.querySelector('.AddPost')
-const AddPostHeight = AddPost.getBoundingClientRect().height
-const AddPostWidth = AddPost.getBoundingClientRect().width
-AddPost.setAttribute('src', ADDPOST)
-AddPost.style.top = `${window.innerHeight - MenuTop - AddPostHeight}px`
-AddPost.style.left = `${MenuLeft - (AddPostWidth - MenuWidth)/2}px`
-
-window.addEventListener('resize', ()=>{
-    const MenuTop = Menu.getBoundingClientRect().y
-    const MenuLeft = Menu.getBoundingClientRect().x
-    const MenuWidth = Menu.getBoundingClientRect().width
+if (typeof whether_Authenticated !== 'undefined' && whether_Authenticated) {
 
     const AddPost = document.querySelector('.AddPost')
     const AddPostHeight = AddPost.getBoundingClientRect().height
     const AddPostWidth = AddPost.getBoundingClientRect().width
-    AddPost.setAttribute('src', ADDPOST)
     AddPost.style.top = `${window.innerHeight - MenuTop - AddPostHeight}px`
     AddPost.style.left = `${MenuLeft - (AddPostWidth - MenuWidth)/2}px`
-})
 
+    window.addEventListener('resize', ()=>{
+        const MenuTop = Menu.getBoundingClientRect().y
+        const MenuLeft = Menu.getBoundingClientRect().x
+        const MenuWidth = Menu.getBoundingClientRect().width
+
+        const AddPost = document.querySelector('.AddPost')
+        const AddPostHeight = AddPost.getBoundingClientRect().height
+        const AddPostWidth = AddPost.getBoundingClientRect().width
+        AddPost.style.top = `${window.innerHeight - MenuTop - AddPostHeight}px`
+        AddPost.style.left = `${MenuLeft - (AddPostWidth - MenuWidth)/2}px`
+    })
+
+}

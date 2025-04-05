@@ -27,7 +27,7 @@
     </form>
 
     <script>
-        const isAuthenticated = @json(auth()->check());
+        const whether_Authenticated = @json(auth()->check());
     </script>
 
     {{-- @vite('resources/JS/feed.js') --}}
