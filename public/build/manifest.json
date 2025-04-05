@@ -1,46 +1,34 @@
 {
-  "resources/CSS/feed.scss": {
+  "resources/CSS/feed.css": {
     "file": "assets/feed-BBg3WcZE.css",
-    "src": "resources/CSS/feed.scss",
+    "src": "resources/CSS/feed.css",
     "isEntry": true
   },
-  "resources/CSS/frame.scss": {
+  "resources/CSS/frame.css": {
     "file": "assets/frame-Ch2AieCC.css",
-    "src": "resources/CSS/frame.scss",
+    "src": "resources/CSS/frame.css",
     "isEntry": true
   },
-  "resources/CSS/login.scss": {
+  "resources/CSS/login.css": {
     "file": "assets/login-4ZqSd-vg.css",
-    "src": "resources/CSS/login.scss",
+    "src": "resources/CSS/login.css",
     "isEntry": true
   },
-  "resources/CSS/register.scss": {
+  "resources/CSS/register.css": {
     "file": "assets/register-9ogpvmFo.css",
-    "src": "resources/CSS/register.scss",
+    "src": "resources/CSS/register.css",
     "isEntry": true
   },
   "resources/JS/feed.js": {
-    "file": "assets/feed-CBGcyan2.js",
+    "file": "assets/feed-DXUpXinp.js",
     "name": "feed",
     "src": "resources/JS/feed.js",
     "isEntry": true
   },
   "resources/JS/frame.js": {
-    "file": "assets/frame-DdojrGeW.js",
+    "file": "assets/frame-B4onkfxd.js",
     "name": "frame",
     "src": "resources/JS/frame.js",
-    "isEntry": true,
-    "assets": [
-      "assets/Logo-DXnmbuL3.svg",
-      "assets/AddPost-BvDfVHk0.svg"
-    ]
-  },
-  "resources/SVG/AddPost.svg": {
-    "file": "assets/AddPost-BvDfVHk0.svg",
-    "src": "resources/SVG/AddPost.svg"
-  },
-  "resources/SVG/Logo.svg": {
-    "file": "assets/Logo-DXnmbuL3.svg",
-    "src": "resources/SVG/Logo.svg"
+    "isEntry": true
   }
 }

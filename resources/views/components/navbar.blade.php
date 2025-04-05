@@ -17,7 +17,7 @@
 <body>
 
     <div class="Navbar">
-        <img alt="Logo" src="{{ Vite::asset('resources/SVG/Logo.svg') }}"/>
+        <img alt="Logo" src="{{ asset('SVG/Logo.svg') }}"/>
         <nav>
             @if($pathname == "home")
             <a href="{{route('profile')}}">PROFILE</a>
@@ -50,7 +50,7 @@
     {{$slot}}
 
     @auth
-    <img alt="AddPost" src="{{ Vite::asset('resources/SVG/AddPost.svg') }}" class="AddPost"/>
+    <img alt="AddPost" src="{{ asset('SVG/AddPost.svg') }}" class="AddPost"/>
     @endauth
 
     <script>
