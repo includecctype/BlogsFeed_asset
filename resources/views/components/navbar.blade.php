@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogsFeed</title>
 
-    {{-- @vite('resources/CSS/frame.scss') --}}
-    <link rel="stylesheet" href="{{ asset('CSS/frame.css') }}"/>
+    {{-- <link rel="stylesheet" href="{{ asset('CSS/frame.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/feed.css') }}"/>
     <link rel="stylesheet" href="{{ asset('CSS/login.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('CSS/register.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('CSS/register.css') }}"/> --}}
+    @vite('resources/CSS/frame.css')
+    @vite('resources/CSS/feed.css')
+    @vite('resources/CSS/login.css')
+    @vite('resources/CSS/register.css')
 </head>
 <body>
 
     <div class="Navbar">
-        <img alt="Logo" src="{{ asset('SVG/Logo.svg') }}"/>
+        <img alt="Logo" src="{{ Vite::asset('resources/SVG/Logo.svg') }}"/>
         <nav>
             @if($pathname == "home")
             <a href="{{route('profile')}}">PROFILE</a>
@@ -47,17 +50,18 @@
     {{$slot}}
 
     @auth
-    <img alt="AddPost" src="{{ asset('SVG/AddPost.svg') }}" class="AddPost"/>
+    <img alt="AddPost" src="{{ Vite::asset('resources/SVG/AddPost.svg') }}" class="AddPost"/>
     @endauth
 
     <script>
         const whether_Authenticated = @json(auth()->check());
     </script>
 
-    {{-- @vite('resources/JS/frame.js') --}}
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="{{ asset('JS/frame.js') }}" type="module"></script>
-    <script src="{{asset('JS/feed.js')}}" type="module"></script>
+    @vite('resources/JS/frame.js')
+    @vite('resources/JS/feed.js')
+    {{-- <script src="{{ asset('JS/frame.js') }}" type="module"></script>
+    <script src="{{asset('JS/feed.js')}}" type="module"></script> --}}
 
 </body>
 </html>

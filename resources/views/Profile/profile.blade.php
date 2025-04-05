@@ -1,6 +1,4 @@
-<x-navbar :pathname="$pathname">
-    {{-- @vite('resources/CSS/feed.scss') --}}
-    
+<x-navbar :pathname="$pathname">    
     <div class="Profile">
         <p>Welcome, {{$user->name}}</p>
     </div>
@@ -26,10 +24,4 @@
         <button type="submit">SUBMIT</button>
     </form>
 
-    <script>
-        const whether_Authenticated = @json(auth()->check());
-    </script>
-
-    {{-- @vite('resources/JS/feed.js') --}}
-    {{-- <script src="{{ asset('JS/feed.js') }}" type="module"></script> --}}
 </x-navbar>

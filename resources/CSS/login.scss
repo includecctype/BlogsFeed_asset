@@ -1,0 +1,15 @@
+$nonres_margin: 20px;
+
+.Login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 95vh;
+
+    :is(input, label, button){
+        width: 200px;
+        margin: calc($nonres_margin/2);
+    }
+}

@@ -1,6 +1,4 @@
 <x-navbar :pathname="$pathname">
-    {{-- @vite('resources/CSS/login.scss') --}}
-
     <form action="" method="POST" class="Login">
         @csrf
 

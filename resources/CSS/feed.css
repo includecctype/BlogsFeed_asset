@@ -1,0 +1,102 @@
+hr {
+  align-self: stretch;
+}
+
+.Feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid rgb(25, 25, 25);
+  width: 60%;
+  height: max-content;
+}
+.Feed > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  width: 90%;
+}
+.Feed > div > :nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(25, 25, 25);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.Feed > div > :nth-child(2) {
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: justify;
+  width: 100%;
+  margin: 20px;
+}
+.Feed > div > img {
+  position: relative;
+  top: 20px;
+  object-fit: contain;
+  width: 400px;
+  aspect-ratio: 4/3;
+}
+@media (max-width: 1100px) {
+  .Feed {
+    border: none;
+  }
+}
+@media (max-width: 1100px) and (min-width: 600px) {
+  .Feed {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .Feed {
+    width: 80%;
+  }
+}
+
+.PostForm {
+  position: fixed;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(25, 25, 25, 0.75);
+  width: 100vw;
+  height: 100vh;
+}
+.PostForm :is(input, label) {
+  margin: 20px;
+}
+.PostForm > label {
+  color: white;
+}
+.PostForm :nth-child(3) {
+  outline: none;
+  width: 60%;
+  height: 250px;
+}
+@media (max-width: 1100px) and (min-width: 600px) {
+  .PostForm :nth-child(3) {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .PostForm :nth-child(3) {
+    width: 80%;
+  }
+}
+.PostForm :nth-child(5) {
+  color: white;
+}
+
+/*# sourceMappingURL=feed.css.map */

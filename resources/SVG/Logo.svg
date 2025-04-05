@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="200" height="200" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-1.5704 -1.5582)">
+  <rect transform="rotate(8.3494)" x="24.112" y="19.008" width="28.565" height="18.909" ry=".80603" fill="#dcdcdc"/>
+  <g fill="none" stroke="#000" stroke-linecap="round" stroke-width=".39688">
+   <path d="m24.585 26.479 20.168 2.96"/>
+   <path d="m24.054 30.095 20.168 2.96"/>
+   <path d="m23.533 33.644 20.168 2.96"/>
+   <path d="m22.978 37.426 20.168 2.96"/>
+  </g>
+  <text transform="matrix(2.425 .36405 -.36405 2.425 -32.2 -106.42)" fill="#0000d7" font-family="'Sitka Banner'" font-size="16px" letter-spacing="1px" stroke-linecap="round" stroke-width=".16184" text-align="justify" style="shape-inside:url(#rect1);white-space:pre" xml:space="preserve"><tspan x="30.822266" y="53.53405">B</tspan></text>
+  <text transform="matrix(-.98892 -.14846 -.14846 .98892 0 0)" x="-30.933556" y="37.888657" fill="#d70000" font-family="'Sitka Banner'" font-size="39.235px" letter-spacing="2.4522px" stroke-linecap="round" stroke-width=".39688" text-align="justify" xml:space="preserve"><tspan x="-30.933556" y="37.888657" fill="#d70000" stroke-width=".39688">F</tspan></text>
+ </g>
+</svg>

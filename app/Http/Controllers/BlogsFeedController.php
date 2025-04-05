@@ -16,7 +16,7 @@ class BlogsFeedController extends Controller
         $current_user_id = Auth::id();
 
         $personal_acc = DB::table('users')->where('id', $current_user_id)->first();
-        $personal_posts = DB::table('posts')->where('user_id', $current_user_id)->get();
+        $personal_posts = DB::table('posts')->where('user_id', $current_user_id)->orderBy('id', 'desc')->get();
         $personal_post_imgs = [];
         foreach($personal_posts as $post){
             $personal_post_imgs[] = Storage::disk('s3')->url($post->post_file);
@@ -53,12 +53,18 @@ class BlogsFeedController extends Controller
             'post_file' => 'mimes:jpg,png|max:2048',
         ]);
 
-        $path ??= Storage::disk('s3')->put('images', $request->file('post_file'), 'public');
+        $path = "0";
+        
+        if($request->hasFile('post_file')){
+            $path = Storage::disk('s3')->put('images', $request->file('post_file'), 'public');
+        }else{
+            $path = "0";
+        }
 
         $id ??= Auth::id();
         $user ??= DB::table('users')->where('id', $id)->select('name')->first();
         $name ??= $user->name;
-        
+
         Post::create([
             'post_text' => $request->post_text,
             'post_file' => $path,

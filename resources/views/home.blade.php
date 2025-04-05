@@ -29,7 +29,4 @@
         const isAuthenticated = @json(auth()->check());
     </script>
 
-    {{-- @vite('resources/JS/feed.js') --}}
-    {{-- <script src="{{ asset('JS/feed.js') }}" type="module"></script> --}}
-
 </x-navbar>
