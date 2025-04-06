@@ -1,34 +1,34 @@
 {
-  "resources/CSS/feed.css": {
+  "resources/css/feed.css": {
     "file": "assets/feed-BBg3WcZE.css",
-    "src": "resources/CSS/feed.css",
+    "src": "resources/css/feed.css",
     "isEntry": true
   },
-  "resources/CSS/frame.css": {
+  "resources/css/frame.css": {
     "file": "assets/frame-Ch2AieCC.css",
-    "src": "resources/CSS/frame.css",
+    "src": "resources/css/frame.css",
     "isEntry": true
   },
-  "resources/CSS/login.css": {
+  "resources/css/login.css": {
     "file": "assets/login-4ZqSd-vg.css",
-    "src": "resources/CSS/login.css",
+    "src": "resources/css/login.css",
     "isEntry": true
   },
-  "resources/CSS/register.css": {
+  "resources/css/register.css": {
     "file": "assets/register-9ogpvmFo.css",
-    "src": "resources/CSS/register.css",
+    "src": "resources/css/register.css",
     "isEntry": true
   },
-  "resources/JS/feed.js": {
+  "resources/js/feed.js": {
     "file": "assets/feed-DXUpXinp.js",
     "name": "feed",
-    "src": "resources/JS/feed.js",
+    "src": "resources/js/feed.js",
     "isEntry": true
   },
-  "resources/JS/frame.js": {
+  "resources/js/frame.js": {
     "file": "assets/frame-B4onkfxd.js",
     "name": "frame",
-    "src": "resources/JS/frame.js",
+    "src": "resources/js/frame.js",
     "isEntry": true
   }
 }

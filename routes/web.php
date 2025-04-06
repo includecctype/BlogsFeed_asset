@@ -8,8 +8,8 @@ use App\Http\Controllers\AuthController;
 Route::get('/', [BlogsFeedController::class, 'routes'])->name('home');
 
 Route::middleware('auth')->group(function(){
-    Route::get('/Profile', [BlogsFeedController::class, 'routes'])->name('profile');
-    Route::get('/Setting', function(){return view('Setting.setting');})->name('setting');
+    Route::get('/profile', [BlogsFeedController::class, 'routes'])->name('profile');
+    Route::get('/setting', function(){return view('setting.setting');})->name('setting');
     Route::post('/post', [BlogsFeedController::class, 'post'])->name('post');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

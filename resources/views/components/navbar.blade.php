@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogsFeed</title>
 
-    {{-- <link rel="stylesheet" href="{{ asset('CSS/frame.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('CSS/feed.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('CSS/login.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('CSS/register.css') }}"/> --}}
-    @vite('resources/CSS/frame.css')
-    @vite('resources/CSS/feed.css')
-    @vite('resources/CSS/login.css')
-    @vite('resources/CSS/register.css')
+    {{-- <link rel="stylesheet" href="{{ asset('css/frame.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/feed.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}"/> --}}
+    @vite('resources/css/frame.css')
+    @vite('resources/css/feed.css')
+    @vite('resources/css/login.css')
+    @vite('resources/css/register.css')
 </head>
 <body>
 
     <div class="Navbar">
-        <img alt="Logo" src="{{ asset('SVG/Logo.svg') }}"/>
+        <img alt="Logo" src="{{ asset('svg/Logo.svg') }}"/>
         <nav>
             @if($pathname == "home")
             <a href="{{route('profile')}}">PROFILE</a>
@@ -50,7 +50,7 @@
     {{$slot}}
 
     @auth
-    <img alt="AddPost" src="{{ asset('SVG/AddPost.svg') }}" class="AddPost"/>
+    <img alt="AddPost" src="{{ asset('svg/AddPost.svg') }}" class="AddPost"/>
     @endauth
 
     <script>
@@ -58,10 +58,10 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    @vite('resources/JS/frame.js')
-    @vite('resources/JS/feed.js')
-    {{-- <script src="{{ asset('JS/frame.js') }}" type="module"></script>
-    <script src="{{asset('JS/feed.js')}}" type="module"></script> --}}
+    @vite('resources/js/frame.js')
+    @vite('resources/js/feed.js')
+    {{-- <script src="{{ asset('js/frame.js') }}" type="module"></script>
+    <script src="{{asset('js/feed.js')}}" type="module"></script> --}}
 
 </body>
 </html>

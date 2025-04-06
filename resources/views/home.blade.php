@@ -1,5 +1,4 @@
 <x-navbar :pathname="$pathname">
-    {{-- @vite('resources/CSS/feed.scss') --}}
     
     <div class="Feed">
         @for($i = 0; $i < count($posts); $i++)
@@ -24,9 +23,5 @@
         <button type="submit">SUBMIT</button>
     </form>
     @endauth
-
-    <script>
-        const isAuthenticated = @json(auth()->check());
-    </script>
 
 </x-navbar>

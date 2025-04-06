@@ -34,7 +34,7 @@ class BlogsFeedController extends Controller
                 ->with('posts', $posts)
                 ->with('images', $post_imgs);
         }elseif($request->is('Profile')){
-            return view('Profile.profile')
+            return view('profile.profile')
                 ->with('pathname', 'profile')
                 ->with('posts', $personal_posts)
                 ->with('user', $personal_acc)
