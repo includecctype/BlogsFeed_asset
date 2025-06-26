@@ -2,6 +2,6 @@
 blogsfeed.zip
 
 node_modules
-*.env/
+*.env
 .npmrc
 
